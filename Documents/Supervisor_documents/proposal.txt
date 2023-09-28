@@ -1,0 +1,17 @@
+Title: "AI-Driven Marine Conservation: Predictive Modeling, 3D Underwater Modeling and VR Experiences"
+
+Description: The central aim of this project is to develop a website that leverages the capabilities of artificial intelligence (AI) to transform trash debris cleanup, coral preservation and diving. The platform  will consist of AI-aided trash debris prediction, simplified 3D models and immersive VR experiences.
+
+Artificial Intelligence holds vast potential to improve the domains of marine exploration, environmental cleanup, and coral conservation by introducing levels of precision, engagement, and sustainability. However, applications fully harnessing AI's capabilities in these fields are notably few. This project aims to bridge this void, establishing itself as an AI-powered solution for marine sustainability.
+
+The project will concentrate on the following areas:
+
+Predictive Trash Debris Tracking: Building an AI model to predict the presence and movement of trash debris at bays and potential dive sites around Gozo. This model will use previosly collected weather and sea data points to offer accurate forecasts. The website will also allow users to log in and report debris, notifying the Dive Centre, thus working hand in hand to aid efficient planning of cleanup activities and marine conservation.
+
+Simplified 3D Underwater Modeling: Using AI techniques like computer vision to create straightforward but effective 3D models of dive sites and coral life. The resulting 3D models aim to give users a comprehensive understanding of the underwater terrain and marine life, facilitating cleanup planning and site selection.
+
+Immersive VR Diving and Cleanup Experiences: Utilizing the power of virtual reality (VR) to design engaging, realistic simulations of dive sites. This component aims to allow users to virtually scout dive sites to familiarize themselves with the terrain and potential debris, thus enhancing the planning and effectiveness of actual cleanup dives. This will enable proactive preservation efforts, ensuring that diving and cleanup activities are conducted in a manner that safeguards these fragile ecosystems.
+
+A website will be implemented to serve as a centralized hub hosting all AI-driven services. It will deliver real-time updates from the predictive AI model, showcase interactive 3D underwater models, provide access to immersive VR diving experiences and will have a variaty of information for divers interested in exploring Gozo's beautiful waters. With a user-friendly design, the platform is geared to facilitate collaborative marine conservation by offering comprehensive insights, enhancing underwater exploration experiences, fostering an engaged community and promoting proactive sustainability efforts.
+
+By integrating these AI-enhanced features, the project aims to create a comprehensive, user-friendly website that revolutionizes marine cleanup and conservation efforts. It seeks to elevate safety standards, improve cleanup planning, enhance underwater experiences, and contribute to healthier, sustainable marine life, thus striking a balance between exploration and preservation.
