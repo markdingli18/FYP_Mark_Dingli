@@ -1,0 +1,58 @@
+average datasets for typical conditions
+dispertion model
+elangarshin model la granjin model... give data every hour and predict where a floating thing will go...
+matslick is an example.. version 2 is freely available... can compare for evaluation
+grid and for every cell have a value
+currents u and v component... 
+net cdf... there is library
+send domain lat and long
+gozo and malta
+10 year dataset
+study patterns and see where currents go most
+or get current currents from today till 4 days and how they will vary and assume something is floating and where it goes
+mfsd marine framework stratogy directive... 9 on litter to report
+debry leeway affected by wind...
+
+14.6 lat and 39 long
+
+free software to view files: https://www.giss.nasa.gov/tools/panoply/download/
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Vishnu:
+
+Time series models... LSTM
+ARIMA
+
+use inputs and define target... use reference example coordinates and see how it varies based on its inputs and can sort of predict where there is the final coordinates
+eample distance from shore as proxy
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+See how data can be open...
+Wait from data from Andrea...
+
+Gullu:
+
+Describe what the probem is
+Properly desciribe what this fyp is about
+Document what is our goal
+Proper accounting of Data and what it is
+Literature Review.. different papers and what they did
+
+1. Description of fyp
+2. Description of data
+3. Literature Review... need a lot to be good
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Searches:
+
+Predictive Trash Debris Tracking using weather data in seas
+
+Lagrangian dispersion or stochastic model
+
+
+
+
