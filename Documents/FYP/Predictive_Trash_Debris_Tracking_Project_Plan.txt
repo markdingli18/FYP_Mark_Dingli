@@ -1,0 +1,60 @@
+Predictive Trash Debris Tracking and Marine Conservation Using AI
+
+Objectives
+1. Data Integration: Collect, preprocess, and integrate diverse datasets (weather, ocean currents) for modeling.
+2. Lagrangian Model Development: Utilize the Ocean Parcels library to simulate the movement of trash debris based on historical and forecasted data.
+3. AI Model Development: Create an AI model for predicting future oceanic and atmospheric conditions.
+4. Real-Time Updates: Develop a web-based platform for visualisation and for future predictions.
+
+Methodology:
+
+Data Sources
+- Satellite Wind Data (Monthly Averages)
+- Copernicus Atmosphere Monitoring Service Data (12-hour intervals)
+- Sea Surface Currents Data (Hourly intervals)
+
+Data Preprocessing
+1. Temporal Alignment:
+   - Align all datasets to a common time resolution, likely through interpolation.
+2. Spatial Alignment:
+   - Ensure datasets are consistent in their spatial coordinates.
+3. Data Cleaning:
+   - Handle missing values and outliers.
+4. Feature Engineering (for AI Model):
+   - Derive new features and apply normalization or standardization.
+
+Lagrangian Model Setup
+- Input Data Preparation: Use cleaned and aligned ocean currents and wind data.
+- Simulation Configuration: Configure the model for particle tracking around the Maltese Islands.
+- Visualization: Implement tools for representing debris movement.
+
+AI Model Development
+- Predictive Modeling: Use time series forecasting techniques (LSTM, GRU, ARIMA, CNN-LSTM) to predict future sea currents and wind conditions.
+- Training and Testing: Split data into training, validation, and testing sets.
+- Integration with Lagrangian Model: Use AI model outputs as inputs for the Lagrangian simulations.
+
+Web Platform Development
+- User Interface: Design an intuitive interface for users to request predictions.
+- Data Visualization: Integrate mapping tools for displaying simulation results.
+- Real-Time Data Processing: Implement a system for processing and displaying real-time data.
+
+Implementation Steps
+1. Data Preprocessing
+2. Model Development:
+   - Develop the Lagrangian model using either Ocean Parcels, PyGnome, or Matslick.
+   - Construct the AI model using TensorFlow, PyTorch, or other suitable libraries.
+3. Integration and Testing:
+   - Integrate the AI and Lagrangian models.
+   - Conduct thorough testing and validation.
+4. Web Platform Implementation:
+   - Develop front-end and back-end components.
+   - Ensure seamless integration of models with the web platform.
+
+Remaining Tasks
+- Finalize Data Coordinates and Timeframe: Determine the exact coordinates and timeframe for obtaining the final version of the data.
+- Select Lagrangian Model: Decide whether to use Ocean Parcels, PyGnome, or Matslick for the Lagrangian simulation.
+- Choose AI Model: Determine which AI model to use, considering options like LSTM, GRU, ARIMA, or CNN-LSTM.
+
+The system uses an AI model to predict ocean and weather conditions for up to one month ahead. First, the latest data about the ocean and weather is gathered using an API. This up-to-date data is then used by the AI model to make predictions about future conditions like wind speed and ocean currents. After the AI model makes these predictions, they are used in the Lagrangian model. The Lagrangian model takes these predictions and simulates where trash debris in the ocean might move during the next month. This process helps to understand and plan for changes in the marine environment.
+
+CNN-LSTM!
