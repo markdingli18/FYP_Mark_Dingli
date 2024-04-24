@@ -1,0 +1,41 @@
+\chapter{Introduction}
+\label{chp:introduction}
+This \acrshort{fyp} is an integration of machine learning techniques with a physics based Lagrangian model~\cite{1} to address the environmental issues of sea debris. At the core of this project is a pipeline that harnesses historical data to forecast future conditions, specifically predicting the next 24 hours of sea surface currents. These predictions serve as inputs for a Lagrangian model~\cite{1}, enabling it to simulate the movement of surface marine debris. Finally, a comparative evaluation of both \acrshort{lstm} and \acrshort{gru} models is conducted, focusing on their predictive accuracy and the quality of the visualisations. This project introduces an approach of merging machine learning with a physics-based model, offering valuable insights to marine conservation efforts and improving decision-making for managing marine debris around the Maltese Islands. 
+
+\section{Problem Definition}
+\label{sec:problem_definition}
+Sea surface debris around the coastal waters of Malta presents a significant environmental challenge. Predominantly composed of plastics, which constitute 82\% of all man-made floating items encountered in the Mediterranean sea~\cite{2}, this debris endangers marine life, disrupts ecological balances, and undermines the ecological integrity of coastal areas~\cite{3}. This problem is further aggravated by the lack of an effective system that can predict and forecast the movement of this surface debris, since as of writing, there exists no system that adequately addresses this challenge specifically for the coastal areas around Malta. This further underscores the need for a system that can accurately predict and visualise the dispersion patterns of sea surface debris.
+
+\section{Motivation}
+\label{sec:motivation}
+The geological characteristics of the Mediterranean sea makes it difficult for surface debris to  escape the area naturally, leading to the accumulation of sea surface debris ~\cite{4}. The current absence of a predictive system tailored to the coastal regions of Malta impedes effective interventions to mitigate environmental harm. This gap opens an opportunity for the implementation of a system that through the application of Machine Learning and physics-based modelling, aims to address an urgent ecological issue, which is widely recognised as a global crisis~\cite{5}. By fulfilling this need, the project aims to provide accurate predictions that can guide effective cleanup operations and inform strategies for long-term marine conservation around the surrounding waters of Malta. 
+
+\section{Aims and Objectives}
+\label{sec:aims_and_objectives}
+The aim of this project is to create a system enhanced with Machine Learning for simulating and predicting the movement of marine debris in the coastal waters of Malta, thereby supporting marine conservation efforts. To achieve this aim, the following objectives have been identified:
+\begin{enumerate}[label=\textbf{0\arabic*.}] % Customize the label format
+    \item \textbf{Data integration:} To preprocess and integrate the sea surface currents datasets ensuring compatibility and consistency for input into both models.
+    \item \textbf{Lagrangian model development:} To develop a Lagrangian physics-based model for simulating the movement of surface marine debris, employing historical data to ensure accurate simulations.
+    \item \textbf{\acrshort{ai} models development:} To develop and fine-tune both \acrshort{lstm} and \acrshort{gru} models for the prediction of future sea surface currents. These models will serve as a crucial component of the forecasting system, leveraging their respective strengths in time series data processing to ensure robust and accurate predictions.
+    \item \textbf{Integrating the AI models with the Lagrangian model:} To integrate the model’s predictions into the Lagrangian model. This integration aims to create future simulations and visualisations of marine debris movement, enhancing the project’s predictive capabilities for marine conservation.
+    \item \textbf{Comparison of \acrshort{ai} models:} To conduct a comparative evaluation of both \acrshort{lstm} and \acrshort{gru} models, focusing on their predictive accuracy and the quality of the final visualisations.
+\end{enumerate}
+
+\section{Proposed Solution}
+\label{sec:proposed_solution}
+This project aims to develop an integrated pipeline for predicting and simulating the movement of marine debris around Malta's coastal waters. The process begins with the preprocessing of the sea surface currents datasets that will be used as input for the subsequent modelling stages. A Lagrangian model will be developed to visualise the debris movement. This approach is designed to clarify both the expected input from the \acrshort{ai} models and the expected nature of the ensuing visualisations. The core of the solution involves developing and fine-tuning two types of machine learning models: \acrshort{lstm} and \acrshort{gru}. These models will undergo extensive testing to determine the optimal architecture and hyper-parameters, aiming to accurately predict sea surface currents for a future 24-hour period. 
+
+Upon establishing the predictive models, the pipeline integrates these predictions into the Lagrangian model, transforming the predicted data into dynamic visualisations of future debris movement. The project culminates in a comparative analysis of the \acrshort{lstm} and \acrshort{gru} models, evaluating their effectiveness through various metrics, including their predictive accuracy and the quality of the generated visualisations. By analysing the results and visualisations, this project aims to provide actionable insights for effective cleanup operations and strategies for long-term marine conservation around the coastal waters of Malta.
+
+\section{Summary of Results}
+\label{sec:summary_of_results}
+This \acrshort{fyp} achieved significant outcomes by developing an integrated system that combines machine learning models with a physics-based Lagrangian framework to forecast the movement and dispersion of sea surface debris. The results demonstrate the system's capability to make accurate 24-hour predictions and dynamically visualise the trajectory of marine debris. Through comparative evaluation, it was determined that the \acrshort{lstm} model outperforms the \acrshort{gru} model in predicting sea surface current velocities. These findings validate the effectiveness of the integrated approach and demonstrate its potential to enhance marine conservation efforts.
+
+\section{Document Structure}
+\label{sec:document_structure}
+The remainder of this document is organised into the following chapters:\newline\newline
+\textbf{Background:} Here, the foundational elements of the project are discussed. This chapter includes a thorough overview of the utilised datasets, an explanation of the Lagrangian model's principles and capabilities, and an insight into the Machine Learning models.\newline\newline
+\textbf{Literature Review:} In the literature review, we will delve into existing research and findings relevant to marine debris, the use of Lagrangian models, and the application of different \acrshort{ai} models in environmental forecasting, establishing the scientific grounding for the project’s methodologies. \newline\newline
+\textbf{Methodology:} This section details the processes undertaken in implementing the \acrshort{fyp}. It includes the steps involved in data integration, the development and integration of the Lagrangian and \acrshort{ai} models, and the evaluation strategy.\newline\newline
+\textbf{Evaluation:} A comprehensive outline of the strategies employed to test and evaluate the effectiveness and reliability of the implementation is presented in this section. This will be followed by the presentation and discussion of the results.\newline\newline
+\textbf{Conclusion:} This \acrshort{fyp} is concluded by summarising conducted work, revisiting the aims and objectives, acknowledging any encountered limitations, highlighting obtained results, and finally suggesting any proposals for future work.

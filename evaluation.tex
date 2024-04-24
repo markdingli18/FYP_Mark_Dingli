@@ -1,0 +1,142 @@
+\graphicspath{{content/chapters/4_evaluation/evaluation_figures}}
+
+\chapter{Evaluation}
+\label{chp:evaluation}
+
+This chapter provides a detailed overview and a comprehensive explanation of the results obtained through the evaluation strategy outlined in Section~\ref{sec:3.5}. The primary objectives are to ascertain which model, \acrshort{lstm} or \acrshort{gru}, demonstrates superior performance, and to evaluate the similarity of the Lagrangian simulations generated using these models' predictions. As previously noted, the framework was executed on two specific dates—August 4th and November 4th, 2023—to gauge the models' consistency and reliability under varying seasonal conditions, offering a thorough analysis of their performance across different environmental dynamics. The chapter is structured into two sections: Section~\ref{sec:4.1} delves into the analysis of average error metrics to discern which model performed best. Section~\ref{sec:4.2} focuses on a geospatial analysis to investigate the impact of to find out if the locations and the amount of data play a role in the predictions, while also briefly comparing the merged predictions with the Lagrangian simulations. This approach ensures a thorough evaluation of the models' effectiveness and their applicability in real-world scenarios.
+
+\section{LSTM vs GRU}
+\label{sec:4.1}
+
+In the initial experiment, we assessed the accuracy of the models in predicting sea surface current velocities by comparing the predicted results against actual historical values using three key error metrics:
+\begin{itemize}
+    \item \textbf{\acrshort{mae}:} This metric computes the average absolute difference between actual and predicted values across the dataset. It quantifies the typical magnitude of the prediction errors without considering their direction, providing a clear measure of average error.
+    \item \textbf{\acrshort{mse}:} This represents the average of the squares of the differences between actual and predicted values. It accentuates larger errors more significantly than smaller ones by squaring the differences, highlighting impactful prediction discrepancies.
+    \item \textbf{\acrshort{rmse}:} Calculated as the square root of the \acrshort{mse}, it measures the standard deviation of residuals, offering a scale-sensitive accuracy measure. It provides an indication of the typical magnitude of prediction errors in the same units as the data.
+\end{itemize}
+
+\subsection{Error Metrics Results}
+\label{subsec:4.1.1}
+
+The average error metrics for the 24-hour rolling predictions from all 37 models on the 4th of August are presented in the tables below:
+
+\begin{table}[H]
+    \caption{\acrshort{lstm} \textit{'u'} average error metrics (August).\label{tab:4.1}}
+    \centering
+    \begin{tblr}{|c|S[table-format=1.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 0.14126 & 0.22658 & 0.05830 \\
+        \textbf{MSE} & 0.11693 & 0.51328 & 0.01012 \\
+        \textbf{RMSE} & 0.17957 & 0.29100 & 0.05289 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \caption{\acrshort{lstm} \textit{'v'} average error metrics (August).\label{tab:4.2}}
+    \centering
+    \begin{tblr}{|c|S[table-format=1.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 0.14370 & 0.13416 & 0.14072 \\
+        \textbf{MSE} & 0.06405 & 0.10900 & 0.07281 \\
+        \textbf{RMSE} & 0.18300 & 0.17483 & 0.21160 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \caption{\acrshort{gru} \textit{'u'} average error metrics (August).\label{tab:4.3}}
+    \centering
+    \begin{tblr}{|c|S[table-format=1.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 0.14849 & 0.22171 & 0.06700 \\
+        \textbf{MSE} & 0.11589 & 0.50339 & 0.01603 \\
+        \textbf{RMSE} & 0.18693 & 0.28451 & 0.07046 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \caption{\acrshort{gru} \textit{'v'} average error metrics (August).\label{tab:4.4}}
+    \centering
+    \begin{tblr}{|c|S[table-format=1.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 0.14472 & 0.13763 & 0.14908 \\
+        \textbf{MSE} & 0.06558 & 0.11215 & 0.06614 \\
+        \textbf{RMSE} & 0.18376 & 0.17936 & 0.20195 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+The analysis of these results reveals insightful differences in model performance. For the \textit{'u'} component, \acrshort{lstm} models demonstrate slightly lower \acrshort{mae} and \acrshort{rmse}, indicating better average accuracy and consistency, although \acrshort{gru} models show a marginally lower \acrshort{mse}. Conversely, for the \textit{'v'} component, both models perform similarly with minimal variations across all metrics, which suggests a near-equivalent capability in handling this type of prediction. Further examination of the variability through Standard Deviation and \acrshort{iqr} metrics shows that \acrshort{lstm} models have a lower standard deviation in the \textit{'v'} component predictions, suggesting more consistent performance relative to \acrshort{gru}. Additionally, the smaller \acrshort{iqr} for \acrshort{lstm} in both components implies that its predictions are more tightly clustered around the median, indicating less variability and more reliability. While both models performed well, \acrshort{lstm} offered a marginally better performance, particularly for the \textit{'u'} component, establishing it as the preferable model. 
+
+On the other hand, the results for the 24-hour rolling predictions for all 37 models on the 4th of November are detailed below:
+
+\begin{table}[H]
+    \caption{\acrshort{lstm} \textit{'u'} average error metrics (November).\label{tab:4.5}}
+    \centering
+    \begin{tblr}{|c|S[table-format=2.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 1.03141 & 2.11801 & 0.29923 \\
+        \textbf{MSE} & 14.76509 & 40.75769 & 0.24335 \\
+        \textbf{RMSE} & 1.63416 & 3.47773 & 0.39745 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \caption{\acrshort{lstm} \textit{'v'} average error metrics (November).\label{tab:4.6}}
+    \centering
+    \begin{tblr}{|c|S[table-format=2.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 2.62164 & 5.50710 & 0.50617 \\
+        \textbf{MSE} & 97.85786 & 253.42893 & 0.86051 \\
+        \textbf{RMSE} & 4.23877 & 8.93816 & 0.84444 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \caption{\acrshort{gru} \textit{'u'} average error metrics (November).\label{tab:4.7}}
+    \centering
+    \begin{tblr}{|c|S[table-format=2.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 1.05110 & 2.11189 & 0.56820 \\
+        \textbf{MSE} & 14.77234 & 40.77340 & 0.46635 \\
+        \textbf{RMSE} & 1.65105 & 3.47079 & 0.58636 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \caption{\acrshort{gru} \textit{'v'} average error metrics (November).\label{tab:4.8}}
+    \centering
+    \begin{tblr}{|c|S[table-format=2.5]|c|c|}
+        \hline
+        \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
+        \hline
+        \textbf{MAE} & 2.65316 & 5.50156 & 0.53727 \\
+        \textbf{MSE} & 97.98028 & 253.62271 & 1.14379 \\
+        \textbf{RMSE} & 4.26801 & 8.93109 & 0.99123 \\
+        \hline
+    \end{tblr}
+\end{table}
+
+The analysis reveals several insights. For the \textit{'u'} component, both models display relatively high \acrshort{mae}, \acrshort{mse}, and \acrshort{rmse}, with \acrshort{lstm} showing lower metrics. The high standard deviations observed for both models suggest a significant presence of outliers, indicating some predictions were inaccurate. This is evident in the \acrshort{gru} \textit{'u'} component where the \acrshort{iqr} is higher, suggesting a broader spread compared to \acrshort{lstm}, pointing to more frequent outlier performances in the \acrshort{gru} model. In contrast, the '\textit{v'} component shows considerably higher error values for both models, with \acrshort{gru} again having higher values across all metrics. The standard deviations and \acrshort{iqr} values are significantly larger in the \textit{'v'} component for both models, reinforcing the presence of outliers and indicating that predictions for the \textit{'v'} component were generally less accurate and more variable. Overall, the \acrshort{lstm} model performs slightly better than the GRU model, particularly in the \textit{'v'} component, as evidenced by the lower error metrics and narrower \acrshort{iqr}, which suggests better predictions. Therefore, the more consistent performance of LSTM across both components makes it the better model overall. 
+
+\subsection{Error Metrics Discussion of Results}
+\label{subsec:4.1.2}
