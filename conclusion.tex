@@ -1,0 +1,41 @@
+\chapter{Conclusion}
+\label{chp:conclusion}
+
+This chapter reflects upon the achievements and objectives outlined in Section~\ref{sec:3.1}, offering a comprehensive assessment of the outcomes. In this \acrshort{fyp}, we successfully integrated \acrshort{lstm} and \acrshort{gru} models with a physics based Lagrangian framework to predict the dispersion of sea surface debris around Maltese coastal waters. This chapter also discusses the limitations encountered during the study, offering a transparent critique of the methodologies employed. Future research directions and potential improvements to the approach will also be discussed.
+
+\section{Revisiting our Aims and Objectives}
+\label{sec:5.1}
+
+The main aim of this \acrshort{fyp} was to develop a predictive modelling system that leverages the strengths of \acrshort{lstm} and \acrshort{gru} neural networks integrated with a physics based Lagrangian framework. This system was designed to forecast the movement and eventual dispersion of sea surface debris within the coastal waters of  Malta. To achieve this overarching goal, the project was guided by several key objectives:
+
+\begin{enumerate}[label=\textbf{0\arabic*.}] 
+    \item We preprocessed and aligned the \acrshort{ssc} velocities datasets for a seamless integration into our models. This preprocessing was pivotal for maintaining consistency and compatibility, laying the groundwork for the subsequent modelling phases.
+    \item A Lagrangian physics-based model was implemented to simulate the dispersion of marine debris on the sea surface using the OceanParcels toolkit.
+    \item Both \acrshort{lstm} and \acrshort{gru} models were developed and fine-tuned, specifically for predicting \acrshort{ssc} velocities. These models capitalised on their inherent strengths in sequential data analysis, enabling them to make accurate predictions.
+    \item We successfully merged the predictions from our \acrshort{ai} models with the Lagrangian simulations. This combination of AI and physics-based models enabled us to create predictive visualisations of sea surface debris movement.
+    \item A comparative assessment was conducted between the \acrshort{lstm} and \acrshort{gru} models, evaluating their predictive accuracy and the reliability of the generated visualisations. This comparative analysis was instrumental in determining the most effective model for our specific application, leading to informed decisions for the final predictive framework.
+\end{enumerate}
+
+\section{Critique and Limitations}
+\label{sec:5.2}
+
+Throughout the course of this \acrshort{fyp}, we encountered some challenges and limitations that influenced the project's trajectory and outcomes. The primary challenge was the presence of missing data, particularly near coastal areas, which likely affected the precision of our predictive models. This issue stemmed from the inherent complexities of coastal data collection, which can obscure and distort data. Originally, we wanted to develop a web-page to visually demonstrate the Lagrangian model's predictions. However, to better focus on the implementation of the \acrshort{ai} and Lagrangian models, this component was not implemented. Moreover, the geographical area of interest selected was relatively limited, potentially constraining the broader applicability of our findings. The final limitation was also the inability to empirically validate the Lagrangian model due to the absence of drifter data within the chosen area, preventing us from performing a direct evaluation of the model.
+
+\section{Future Work}
+\label{sec:5.3}
+
+This \acrshort{fyp} lays the groundwork for various expansions that could improve the capabilities and applicability of our system. Future directions include:
+
+\begin{itemize}
+    \item Integrating additional weather phenomena like wind and wave height into the models could potentially enhance the predictions.
+    \item The framework can be adapted for various applications, including predicting the movements of jellyfish and plankton, assisting in search and rescue operations, and simulating the dynamics of oil spills.
+    \item Transitioning to ensemble learning methods may potentially enhance the accuracy of predictive models. Furthermore, the implementation of more sophisticated models, such as transformers, could facilitate the processing of larger datasets and possibly improve predictions.
+    \item Expanding the area of interest and consequently increasing the number of models beyond the current 37 could provide a more comprehensive understanding of marine debris dynamics. Furthermore, this would enable the evaluation of the Lagrangian model using historical drifter data.
+    \item Developing a model specifically designed to predict and interpolate missing values within the datasets could enhance the accuracy of predictions and improve visualisations.
+    \item Developing a website that not only showcases future predictions but also incorporates enhanced visualisations would make the research more accessible and informative.
+\end{itemize}
+
+\section{Final Remarks}
+\label{sec:5.4}
+
+In this \acrshort{fyp}, we successfully integrated \acrshort{ai} models with a physics based Lagrangian framework to predict and visualise the future 24-hour movement of sea surface debris around Malta's coastal waters. Through our evaluation process, we identified that the \acrshort{lstm} model outperformed the \acrshort{gru} model in terms of prediction accuracy. This project not only highlighted the capabilities and limitations of the integrated system but also outlined its advantages and key features. Collectively, this \acrshort{gru} contributes to a comprehensive system that enhances marine conservation efforts by providing actionable insights for effective cleanup operations and simultaneously informing strategies for long-term marine conservation around the coast of Malta.
