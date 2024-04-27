@@ -1,4 +1,5 @@
 \graphicspath{{content/chapters/4_evaluation/evaluation_figures}}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
 
 \chapter{Evaluation}
 \label{chp:evaluation}
@@ -18,11 +19,13 @@ In the initial experiment, we assessed the accuracy of the models in predicting 
 \subsection{Error Metrics Results}
 \label{subsec:4.1.1}
 
-The average error metrics for the 24-hour rolling predictions from all 37 models on the 4\textsuperscript{th} of August are presented in the tables below:
+The average error metrics for the 24-hour rolling predictions from all 37 models on the 4\textsuperscript{th} of August are presented in the tables below:\newline
 
 \begin{table}[H]
-    \caption{\acrshort{lstm} \textit{'u'} average error metrics (August).\label{tab:4.1}}
+\centering
+\begin{minipage}{0.5\textwidth}
     \centering
+    \caption{\acrshort{lstm} \textit{'u'} average error metrics (August).\label{tab:4.1}}
     \begin{tblr}{|c|S[table-format=1.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -32,11 +35,10 @@ The average error metrics for the 24-hour rolling predictions from all 37 models
         \textbf{RMSE} & 0.17957 & 0.29100 & 0.05289 \\
         \hline
     \end{tblr}
-\end{table}
-
-\begin{table}[H]
-    \caption{\acrshort{lstm} \textit{'v'} average error metrics (August).\label{tab:4.2}}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
     \centering
+    \caption{\acrshort{lstm} \textit{'v'} average error metrics (August).\label{tab:4.2}}
     \begin{tblr}{|c|S[table-format=1.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -46,11 +48,14 @@ The average error metrics for the 24-hour rolling predictions from all 37 models
         \textbf{RMSE} & 0.18300 & 0.17483 & 0.21160 \\
         \hline
     \end{tblr}
+\end{minipage}
 \end{table}
 
 \begin{table}[H]
-    \caption{\acrshort{gru} \textit{'u'} average error metrics (August).\label{tab:4.3}}
+\centering
+\begin{minipage}{0.5\textwidth}
     \centering
+    \caption{\acrshort{gru} \textit{'u'} average error metrics (August).\label{tab:4.3}}
     \begin{tblr}{|c|S[table-format=1.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -60,11 +65,10 @@ The average error metrics for the 24-hour rolling predictions from all 37 models
         \textbf{RMSE} & 0.18693 & 0.28451 & 0.07046 \\
         \hline
     \end{tblr}
-\end{table}
-
-\begin{table}[H]
-    \caption{\acrshort{gru} \textit{'v'} average error metrics (August).\label{tab:4.4}}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
     \centering
+    \caption{\acrshort{gru} \textit{'v'} average error metrics (August).\label{tab:4.4}}
     \begin{tblr}{|c|S[table-format=1.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -74,6 +78,7 @@ The average error metrics for the 24-hour rolling predictions from all 37 models
         \textbf{RMSE} & 0.18376 & 0.17936 & 0.20195 \\
         \hline
     \end{tblr}
+\end{minipage}
 \end{table}
 
 The analysis of these results reveals insightful differences in model performance. For the \textit{'u'} component, \acrshort{lstm} models demonstrate slightly lower \acrshort{mae} and \acrshort{rmse}, indicating better average accuracy and consistency, although \acrshort{gru} models show a marginally lower \acrshort{mse}. Conversely, for the \textit{'v'} component, both models perform similarly with minimal variations across all metrics, which suggests a near-equivalent capability in handling this type of prediction. Further examination of the variability through Standard Deviation and \acrshort{iqr} metrics shows that \acrshort{lstm} models have a lower standard deviation in the \textit{'v'} component predictions, suggesting more consistent performance relative to \acrshort{gru}. Additionally, the smaller \acrshort{iqr} for \acrshort{lstm} in both components implies that its predictions are more tightly clustered around the median, indicating less variability and more reliability. While both models performed well, \acrshort{lstm} offered a marginally better performance, particularly for the \textit{'u'} component, establishing it as the preferable model. 
@@ -81,8 +86,10 @@ The analysis of these results reveals insightful differences in model performanc
 On the other hand, the results for the 24-hour rolling predictions for all 37 models on the 4\textsuperscript{th} of November are detailed below:
 
 \begin{table}[H]
-    \caption{\acrshort{lstm} \textit{'u'} average error metrics (November).\label{tab:4.5}}
+\centering
+\begin{minipage}{0.47\textwidth}
     \centering
+    \caption{\acrshort{lstm} \textit{'u'} average error metrics (November).\label{tab:4.5}}
     \begin{tblr}{|c|S[table-format=2.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -92,11 +99,10 @@ On the other hand, the results for the 24-hour rolling predictions for all 37 mo
         \textbf{RMSE} & 1.63416 & 3.47773 & 0.39745 \\
         \hline
     \end{tblr}
-\end{table}
-
-\begin{table}[H]
-    \caption{\acrshort{lstm} \textit{'v'} average error metrics (November).\label{tab:4.6}}
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}
     \centering
+    \caption{\acrshort{lstm} \textit{'v'} average error metrics (November).\label{tab:4.6}}
     \begin{tblr}{|c|S[table-format=2.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -106,11 +112,14 @@ On the other hand, the results for the 24-hour rolling predictions for all 37 mo
         \textbf{RMSE} & 4.23877 & 8.93816 & 0.84444 \\
         \hline
     \end{tblr}
+\end{minipage}
 \end{table}
 
 \begin{table}[H]
-    \caption{\acrshort{gru} \textit{'u'} average error metrics (November).\label{tab:4.7}}
+\centering
+\begin{minipage}{0.47\textwidth}
     \centering
+    \caption{\acrshort{gru} \textit{'u'} average error metrics (November).\label{tab:4.7}}
     \begin{tblr}{|c|S[table-format=2.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -120,11 +129,10 @@ On the other hand, the results for the 24-hour rolling predictions for all 37 mo
         \textbf{RMSE} & 1.65105 & 3.47079 & 0.58636 \\
         \hline
     \end{tblr}
-\end{table}
-
-\begin{table}[H]
-    \caption{\acrshort{gru} \textit{'v'} average error metrics (November).\label{tab:4.8}}
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}
     \centering
+    \caption{\acrshort{gru} \textit{'v'} average error metrics (November).\label{tab:4.8}}
     \begin{tblr}{|c|S[table-format=2.5]|c|c|}
         \hline
         \textbf{Metric} & \textbf{Mean} & \textbf{Std Dev} & \textbf{IQR} \\
@@ -134,94 +142,97 @@ On the other hand, the results for the 24-hour rolling predictions for all 37 mo
         \textbf{RMSE} & 4.26801 & 8.93109 & 0.99123 \\
         \hline
     \end{tblr}
+\end{minipage}
 \end{table}
 
-The analysis reveals several insights. For the \textit{'u'} component, both models display relatively high \acrshort{mae}, \acrshort{mse}, and \acrshort{rmse}, with \acrshort{lstm} showing lower metrics. The high standard deviations observed for both models suggest a significant presence of outliers, indicating some predictions were inaccurate. This is evident in the \acrshort{gru} \textit{'u'} component where the \acrshort{iqr} is higher, suggesting a broader spread compared to \acrshort{lstm}, pointing to more frequent outlier performances in the \acrshort{gru} model. In contrast, the '\textit{v'} component shows considerably higher error values for both models, with \acrshort{gru} again having higher values across all metrics. The standard deviations and \acrshort{iqr} values are significantly larger in the \textit{'v'} component for both models, reinforcing the presence of outliers and indicating that predictions for the \textit{'v'} component were generally less accurate and more variable. Overall, the \acrshort{lstm} model performs slightly better than the GRU model, particularly in the \textit{'v'} component, as evidenced by the lower error metrics and narrower \acrshort{iqr}, which suggests better predictions. Therefore, the more consistent performance of LSTM across both components makes it the better model overall. 
+The analysis reveals several insights. For the \textit{'u'} component, both models display relatively high \acrshort{mae}, \acrshort{mse}, and \acrshort{rmse}, with \acrshort{lstm} showing lower metrics. The high standard deviations observed for both models suggest a significant presence of outliers, indicating some predictions were inaccurate. This is evident in the \acrshort{gru} \textit{'u'} component where the \acrshort{iqr} is higher, suggesting a broader spread compared to \acrshort{lstm}, pointing to more frequent outliers in the \acrshort{gru} model. In contrast, the '\textit{v'} component shows considerably higher error values for both models, with \acrshort{gru} again having higher values across all metrics. The standard deviations and \acrshort{iqr} values are significantly larger in the \textit{'v'} component for both models, reinforcing the presence of outliers and indicating that predictions for the \textit{'v'} component were generally less accurate and more variable. Overall, the \acrshort{lstm} model performs slightly better than the GRU model, particularly in the \textit{'v'} component, as evidenced by the lower error metrics and narrower \acrshort{iqr}. Therefore, the more consistent performance of \acrshort{lstm} across both components makes it the better model overall. 
 
 \subsection{Error Metrics Discussion of Results}
 \label{subsec:4.1.2}
 
-The analysis highlights that predictions for the \textit{'u'} component (east-west velocity) were generally more accurate than for the \textit{'v'} component (north-south velocity). This discrepancy can be attributed to the alignment of radar systems, which are aligned in a north-south orientation, as depicted in Figure~\ref{fig_2.1}. This alignment potentially impacts the accuracy of \textit{'v'} component reading and inhibits the radar's ability to capture detailed north-south data, therefore leading to less accurate predictions for the \textit{'v'} component. 
+The analysis highlights that predictions for the \textit{'u'} component (east-west velocity) were generally more accurate than for the \textit{'v'} component (north-south velocity). This discrepancy can be attributed to the alignment of radar systems, which are aligned in a north-south orientation, as depicted in Figure~\ref{fig_2.1}. This alignment potentially impacts the accuracy of \textit{'v'} component readings and inhibits the radar's ability to capture detailed north-south data, consequently leading to less accurate predictions for the \textit{'v'} component. Moreover, the first experiment conducted on the 4\textsuperscript{th} of August exhibited notably better results, characterised by lower error values and fewer outliers when compared to the subsequent November evaluation. This improvement is likely due to the August data being in close proximity to the final sequences of the test dataset, potentially leading to the models being better tuned to these conditions. Furthermore, the process of rolling forecasting, which bases predictions on preceding outputs, may lead to inaccuracies, particularly when initial predictions are derived from interpolated data. This method could inherently propagate errors, especially under conditions of notable missing data as discussed in Sub-section~\ref{subsec:3.3.3}.
 
-Moreover, the first experiment conducted on the 4\textsuperscript{th} of August exhibited notably better results—characterised by lower error values and fewer outliers—compared to the subsequent November evaluation. This improvement is likely due to the proximity of the August data to the final sequences of the test dataset, potentially leading to the models being better tuned to these conditions. Furthermore, the process of rolling forecasting, which bases predictions on preceding outputs, may lead to inaccuracies, particularly when initial predictions are derived from interpolated data. This method could inherently propagate errors, especially under conditions of notable missing data as discussed in Sub-section~\ref{subsec:3.3.3}.
-
-Such findings underscore the necessity of considering temporal proximity and data integrity when assessing model performance. These phenomena and their implications on model performance will be explored further in the next section.
+Such findings emphasise the necessity of considering temporal proximity and data integrity when assessing model performance. These phenomena and their implications on model performance will be explored further in the next section.
 
 \section{Geospatial Analysis}
 \label{sec:4.2}
 
-In this section, we extended the analysis inspired by the insights garnered from the heat map depicted in Figure~\ref{sec:3.5}. Our objectives were multifaceted: we aimed to determine whether an increased volume of data correlates with enhanced predictive accuracy, whether data points closer to the coast—typically characterised by less data-yield poorer performance, and whether the time of year and seasonality of the data impact the results. The primary goal was to assess whether the geographical location of data points influences the accuracy of the predictive models. Additionally, we sought to compare the final Lagrangian simulations generated by both the \acrshort{lstm} and \acrshort{gru} models to evaluate their similarities in modelling sea surface debris.
+In this section, we extended the analysis inspired by the insights garnered from the heat map depicted in Figure~\ref{sec:3.5}. Our objectives were multifaceted; we aimed to determine whether an increased volume of data correlates with enhanced predictive accuracy, whether data points closer to the coast—typically characterised by less data-yield poorer performance, and whether the time of year and seasonality of the data impact the results. The primary goal was to assess whether the geographical location of data points influences the accuracy of the predictive models. Additionally, we sought to compare the final Lagrangian simulations generated by both the \acrshort{lstm} and \acrshort{gru} models to evaluate their similarities in modelling sea surface debris.
 
 \subsection{The Hypothesis}
 \label{subsec:4.2.1}
 
-As highlighted in Sub-sections~\ref{subsec:3.3.1} and~\ref{subsec:3.5.2}, our dataset contains a significant number of \acrshort{nan}s, with data points closer to the coast having more \acrshort{nan}s present, as evidenced in Figure~\ref{fig_3.5}. This is corroborated by Figure~\ref{fig_4.1}, which illustrates how some data points, have significantly less data available. Figure~\ref{fig_3.5} is instrumental in demonstrating the correlation between model performance and geographic location, thereby paving the way for a focused analysis on the impact of data availability at specific locations. 
+As highlighted in Sub-sections~\ref{subsec:3.3.1} and~\ref{subsec:3.5.2}, the dataset contains a significant number of \acrshort{nan}s, with data points closer to the coast having more \acrshort{nan}s present, as evidenced in Figure~\ref{fig_3.5}. This is corroborated by Figure~\ref{fig_4.1}, which illustrates how some data points have significantly less data available. Figure~\ref{fig_3.5} is instrumental in demonstrating the correlation between model performance and geographic location, thereby paving the way for a focused analysis on the impact of data availability at specific locations. Based on these observations, we formulated a hypothesis:
+\begin{hypothesis}
+A plausible hypothesis could propose that data points near the coast exhibit reduced data availability due to environmental and technical challenges that interfere with radar performance. This scarcity of data consequently impairs the accuracy of predictive models for \acrshort{ssc} velocities near the coast. Specifically, it suggests that models predicting \acrshort{ssc} at coastal locations perform less effectively compared to those further offshore, where radar data tends to be more complete.
+\label{hyp}
+\end{hypothesis}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth,keepaspectratio]{histogram_of_data_points_by_location_number.pdf}
+    \includegraphics[width=0.72\textwidth,keepaspectratio]{histogram_of_data_points_by_location_number.pdf}
     \caption[Histogram of data points by location number.]{-- Histogram of data points by location number.\label{fig_4.1}}
 \end{figure}
 
-Based on these observations, we formulated a hypothesis: \textit{A plausible hypothesis could propose that data points near the coast exhibit reduced data availability due to environmental and technical challenges that interfere with radar performance. This scarcity of data consequently impairs the accuracy of predictive models for \acrshort{ssc} velocities near the coast. Specifically, it suggests that models predicting currents at coastal locations perform less effectively compared to those further offshore, where radar data tends to be more complete.}
-
-The following Subsections will analyse this hypothesis, employing a comparative analysis with the heat map presented in Figure~\ref{fig_3.5} to validate or refute our assumption regarding the influence of geographical location on model accuracy.
+The following Subsections will analyse hypothesis~\ref{hyp}, employing a comparative analysis with the heat map presented in Figure~\ref{fig_3.5} to validate or refute our assumption regarding the influence of geographical location on model accuracy.
 
 \subsection{Heat maps Results and Analysis}
 \label{subsec:4.2.2}
 
-As outlined in Sub-section~\ref{subsec:3.5.2}, we employed heat maps to analyse the performance of our models geospatially, focusing on the \acrshort{mae} across all 37 models. These visualisations are crucial for testing the validity of our hypothesis regarding the impact of data availability on predictive accuracy near coastal areas. Heat maps for the \acrshort{mae} error metrics were produced for both the \textit{'u'} and \textit{'v'} components of both \acrshort{lstm} and \acrshort{gru} models, covering both the August 4\textsuperscript{th} and November 4\textsuperscript{th}, 2023 predictions. To enhance the clarity of these visualisations and minimise the influence of outliers, we applied a clipping method at the 95\textsuperscript{th} percentile of the data. This method effectively limited the range of data considered for colour scaling in the heat maps, allowing for more nuanced visual comparisons between most data points by excluding extreme outliers. The resultant heat maps for August 4\textsuperscript{th} are displayed as follows:
+As outlined in Sub-section~\ref{subsec:3.5.2}, we employed heat maps to geospatially analyse the performance of our models, focusing on the \acrshort{mae} across all 37 models. These visualisations are crucial for testing the validity of hypothesis~\ref{hyp} regarding the impact of data availability on predictive accuracy near coastal areas. Heat maps for the \acrshort{mae} error metrics were produced for both the \textit{'u'} and \textit{'v'} components of both \acrshort{lstm} and \acrshort{gru} models, covering both the August 4\textsuperscript{th} and November 4\textsuperscript{th}, 2023 predictions. To enhance the clarity of these visualisations and minimise the influence of outliers, we applied a clipping method at the 95\textsuperscript{th} percentile of the data. This method effectively limited the range of data considered for colour scaling in the heat maps, allowing for more nuanced visual comparisons between most data points by excluding extreme outliers. The resultant heat maps for August 4\textsuperscript{th} are displayed as follows:
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth,keepaspectratio]{u_component_MAE_heatmaps_(Aug).pdf}
+    \includegraphics[width=0.78\textwidth,keepaspectratio]{u_component_MAE_heatmaps_(Aug).pdf}
     \caption[\textit{'u'} component MAE heat maps (August).]{-- \textit{'u'} component \acrshort{mae} heat maps (August).\label{fig_4.2}}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth,keepaspectratio]{v_component_MAE_heatmaps_(Aug).pdf}
+    \includegraphics[width=0.78\textwidth,keepaspectratio]{v_component_MAE_heatmaps_(Aug).pdf}
     \caption[\textit{'v'} component MAE heat maps (August).]{-- \textit{'v'} component \acrshort{mae} heat maps (August).\label{fig_4.3}}
 \end{figure}
-The heat maps for November 4\textsuperscript{th} are detailed in the subsequent figures:
 
-\begin{figure}[htbp]
+\noindent The heat maps for November 4\textsuperscript{th} are detailed in the subsequent figures:
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth,keepaspectratio]{u_component_MAE_heatmaps_(Nov).pdf}
+    \includegraphics[width=0.78\textwidth,keepaspectratio]{u_component_MAE_heatmaps_(Nov).pdf}
     \caption[\textit{'u'} component MAE heat maps (November).]{-- \textit{'u'} component \acrshort{mae} heat maps (November).\label{fig_4.4}}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth,keepaspectratio]{v_component_MAE_heatmaps_(Nov).pdf}
+    \includegraphics[width=0.78\textwidth,keepaspectratio]{v_component_MAE_heatmaps_(Nov).pdf}
     \caption[\textit{'v'} component MAE heat maps (November).]{-- \textit{'v'} component \acrshort{mae} heat maps (November).\label{fig_4.5}}
 \end{figure}
 
-The hypothesis regarding the impact of input data quality and quantity on model performance is nuanced by the evidence presented in the \acrshort{mae} heat maps. These visualisations clarify that while models near the coast generally perform worse, presumably due to less data being available, there are notable exceptions where coastal predictions maintained good accuracy. This observation challenges the assumption that greater data volume directly correlates with higher predictive accuracy. Instead, it suggests that the models' capabilities to handle noise and extract meaningful patterns from sparse data can significantly impact their effectiveness. Furthermore, the differential accuracy between the \textit{'u'} and \textit{'v'} components highlights the complexity of environmental factors and model sensitivities, which contribute to a diverse spectrum of outcomes that are not solely determined by the amount of data available.
+The hypothesis~\ref{hyp} is nuanced by the evidence presented in the \acrshort{mae} heat maps. These visualisations clarify that while models near the coast generally perform worse, presumably due to less data being available, there are notable exceptions where coastal predictions maintained good accuracy. This observation challenges the assumption that greater data volume directly correlates with higher predictive accuracy. Instead, it suggests that the models' capabilities to handle noise and extract meaningful patterns from sparse data can significantly impact their effectiveness. Furthermore, the differential accuracy between the \textit{'u'} and \textit{'v'} components highlights the complexity of environmental factors and model sensitivities, which contribute to a diverse spectrum of outcomes that are not solely determined by the amount of data available.
 
-Dividing the analysis between the August and November predictions reveals a stark contrast; predictions for August are markedly more accurate, underscoring the importance of the temporal proximity of training data to the predictive period and the impact of seasonal variations. The outliers observed on August 4\textsuperscript{th} are not consistent with those on November 4\textsuperscript{th}, highlighting the temporal variability of missing data and its non-uniform impact across different points and times. it becomes evident that no consistent pattern exists, thus challenging any definitive conclusions. While certain models excel in predicting the \textit{'u'} component, their performance diminishes when tasked with the \textit{'v'} component. These observations attest to the intricate dynamics at play in predictive modelling, where factors like the models' ability to manage noise and the inherent directional properties of data lead to outcomes where less data does not always result in less accuracy.
+Dividing the analysis between the August and November predictions reveals a stark contrast; predictions for August are markedly more accurate, underscoring the importance of the temporal proximity of training data to the predictive period and the impact of seasonal variations. The outliers observed on August 4\textsuperscript{th} are not consistent with those on November 4\textsuperscript{th}, highlighting the temporal variability of missing data and its non-uniform impact across different points and times. It becomes evident that no consistent pattern exists, thus challenging any definitive conclusions. While certain models excel in predicting the \textit{'u'} component, their performance diminishes when tasked with the \textit{'v'} component. These observations attest to the intricate dynamics at play in predictive modelling, where factors like the models' ability to manage noise and the inherent directional properties of data lead to outcomes where less data does not always result in less accuracy. Therefore, these findings not only challenge but effectively disprove hypothesis~\ref{hyp}.
 
 \subsection{Comparison of Lagrangian Simulations}
 \label{subsec:4.2.3}
 
-In the final component of the evaluation framework, we assessed the performance of the \acrshort{lstm} and \acrshort{gru} models by analysing their centroids, spreads, and skewness within their respective Lagrangian simulation outputs. The findings for August 4\textsuperscript{th} are depicted in Figure~\ref{fig_4.6}:
+In the final component of the evaluation framework, we assessed the performance similarities between the \acrshort{lstm} and \acrshort{gru} models by analysing their centroids, spreads, and skewness within their respective Lagrangian simulation outputs. The findings for August 4\textsuperscript{th} are depicted in Figure~\ref{fig_4.6}:
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.45\textwidth,keepaspectratio]{LSTM_vs_GRU_comparison_on_lagrangian_simulations_(august).pdf}
+    \includegraphics[width=0.6\textwidth,keepaspectratio]{LSTM_vs_GRU_comparison_on_lagrangian_simulations_(august).pdf}
     \caption[LSTM vs GRU comparison on Lagrangian simulations (August).]{-- \acrshort{lstm} vs \acrshort{gru} comparison on Lagrangian simulations (August).\label{fig_4.6}}
 \end{figure}
-On the contrary, the results for the 4\textsuperscript{th} of November are as follows:
+
+For the 4\textsuperscript{th} of August, the average centroid distances for the \acrshort{lstm} and \acrshort{gru} models were around 2 km, suggesting both models achieved different geographical accuracy. The standard deviation of these distances was relatively low at 1.54 km, indicating consistent clustering near the centroids. However, the \acrshort{gru} model demonstrated a more compact spread of 0.54 km compared to the \acrshort{lstm}'s 1.81 km, suggesting \acrshort{gru}'s predictions were more tightly grouped. The skewness metrics showed a mild eastward and southward bias in \acrshort{lstm}'s predictions, whereas \acrshort{gru} exhibited a stronger westward bias and a slight northward tendency, highlighting directional tendencies in their prediction patterns.\newline
+
+\noindent On the contrary, the results for the 4\textsuperscript{th} of November are as follows:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.45\textwidth,keepaspectratio]{LSTM_vs_GRU_comparison_on_lagrangian_simulations_(november).pdf}
+    \includegraphics[width=0.6\textwidth,keepaspectratio]{LSTM_vs_GRU_comparison_on_lagrangian_simulations_(november).pdf}
     \caption[LSTM vs GRU comparison on Lagrangian simulations (November).]{-- LSTM vs GRU comparison on Lagrangian simulations (November).\label{fig_4.7}}
 \end{figure}
 
-For the 4\textsuperscript{th} of August, the average centroid distances for the \acrshort{lstm} and \acrshort{gru} models were around 2 km, suggesting both models achieved different geographical accuracy. The standard deviation of these distances was relatively low at 1.54 km, indicating consistent clustering near the centroids. However, the \acrshort{gru} model demonstrated a more compact spread of 0.54 km compared to the \acrshort{lstm}'s 1.81 km, suggesting \acrshort{gru}'s predictions were more tightly grouped. The skewness metrics showed a mild eastward and southward bias in \acrshort{lstm}'s predictions, whereas \acrshort{gru} exhibited a stronger westward bias and a slight northward tendency, highlighting directional tendencies in their prediction patterns.
-
-Conversely, the results from the 4\textsuperscript{th} of November showed improvements in clustering, with mean and median centroid distances reduced to approximately 1.63 km and 1.91 km respectively. This reduction, coupled with a decreased standard deviation of 0.70 km, suggests enhanced prediction accuracy and consistency for this period. Interestingly, \acrshort{lstm} showed a more consistent spread of 1.60 km, whereas \acrshort{gru}’s predictions were more dispersed, with a spread of 2.58 km. Skewness values also shifted, indicating changes in predictive behaviour that might be influenced by different environmental conditions or model sensitivities to the input data at that time.
+Conversely, the results from the 4\textsuperscript{th} of November showed improvements in clustering, with mean and median centroid distances reduced to approximately 1.63 km and 1.91 km respectively. This reduction, coupled with a decreased standard deviation of 0.70 km, suggests enhanced prediction accuracy and consistency for this period. Interestingly, \acrshort{lstm} showed a more consistent spread of 1.60 km, whereas \acrshort{gru}’s predictions were more dispersed, with a spread of 2.58 km. Skewness values also shifted, indicating changes in predictive behaviour that might be influenced by different environmental conditions or model sensitivities to the input data at that time.\newline
 
 Overall, the analyses highlight that the \acrshort{lstm}s generally offer more consistent and reliable performance, marked by less variability in spread and skewness compared to \acrshort{gru}s. While \acrshort{gru}s seemed to adjust its performance based on different conditions, suggesting a possible sensitivity to seasonal or environmental changes, the \acrshort{lstm}s maintained steadiness across the evaluated metrics. This consistent performance might render \acrshort{lstm}s more suitable for applications requiring consistency across varying conditions.
 
@@ -236,6 +247,7 @@ The visual comparisons between Figures~\ref{fig_3.9} and~\ref{fig_4.8} clearly u
     \caption[LSTM and GRU initial vs final debris movement (November).]{-- \acrshort{lstm} and \acrshort{gru} initial vs final debris movement (November).\label{fig_4.8}}
 \end{figure}
 
+\vspace{-1cm}
 \section{Summary}
 \label{sec:4.3}
 
