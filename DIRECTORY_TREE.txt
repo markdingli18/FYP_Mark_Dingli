@@ -1,0 +1,63 @@
+code
+├── Data
+│   ├── 1_day_actual_data_frames
+│   ├── 3_day_input_data_frames
+│   ├── coordinate_data_frames
+│   ├── land_sea_mask
+│   │   ├── land_sea_mask_malta.nc
+│   │   ├── MaltaCoastline.dbf
+│   │   ├── MaltaCoastline.prj
+│   │   ├── MaltaCoastline.shp
+│   │   ├── MaltaCoastline.shp.xml
+│   │   ├── MaltaCoastline.shx
+│   │   └── sicily
+│   ├── model_IO
+│   │   ├── 1_day_actual_4th_SSC_Data.nc
+│   │   ├── 3_day_input_SSC_Data.nc
+│   │   ├── 7_day_SSC_Data.nc
+│   │   ├── final_SSC_Data.nc
+│   │   ├── GRU
+│   │   │   ├── GRU_merged_predictions.nc
+│   │   │   ├── GRU_merged_predictions.final.csv
+│   │   │   ├── GRU_merged_predictions.u.csv
+│   │   │   └── GRU_merged_predictions.v.csv
+│   │   └── LSTM
+│   │       ├── LSTM_merged_predictions.nc
+│   │       ├── LSTM_merged_predictions.final.csv
+│   │       ├── LSTM_merged_predictions.u.csv
+│   │       └── LSTM_merged_predictions.v.csv
+│   ├── saved_models
+│   │   ├── GRU
+│   │   │   ├── models_u
+│   │   │   └── models_v
+│   │   └── LSTM
+│   │       ├── models_u
+│   │       └── models_v
+│   └── sea_surface_currents
+│       ├── SSC_MaltaSicily_2020
+│       ├── SSC_MaltaSicily_2021
+│       ├── SSC_MaltaSicily_2022
+│       └── SSC_MaltaSicily_2023
+├── Evaluation_Code
+│   ├── LSTM_vs_GRU_metrics_evaluation.ipynb
+│   ├── LSTM_vs_GRU_spatial_evaluation.ipynb
+│   └── visualisations.ipynb
+├── Lagrangian_Output
+│   ├── 7_day_simulation.zarr
+│   ├── GRU_actual_values.zarr
+│   ├── GRU_actual_values_2.zarr
+│   ├── GRU_predicted_values.zarr
+│   ├── GRU_predicted_values_2.zarr
+│   ├── LSTM_actual_values.zarr
+│   ├── LSTM_actual_values_2.zarr
+│   ├── LSTM_predicted_values.zarr
+│   ├── LSTM_predicted_values_2.zarr
+│   ├── 7_day_simulation.gif
+├── GRU_evaluation_lagrangian_model.ipynb
+├── GRU_multiple_model_framework_u.ipynb
+├── GRU_multiple_model_framework_v.ipynb
+├── LSTM_evaluation_lagrangian_model.ipynb
+├── LSTM_multiple_model_framework_u.ipynb
+├── LSTM_multiple_model_framework_v.ipynb
+├── MAIN_lagrangian_model.ipynb
+└── SSC_data_pre_processing.ipynb
