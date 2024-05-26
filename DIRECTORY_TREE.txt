@@ -53,6 +53,10 @@ code
 │   ├── LSTM_predicted_values.zarr
 │   ├── LSTM_predicted_values_2.zarr
 │   ├── 7_day_simulation.gif
+│   ├── GRU_predicted_particle_trajectories.gif
+│   ├── GRU_predicted_particle_trajectories_2.gif
+│   ├── LSTM_predicted_particle_trajectories.gif
+│   └── LSTM_predicted_particle_trajectories_2.gif
 ├── GRU_evaluation_lagrangian_model.ipynb
 ├── GRU_multiple_model_framework_u.ipynb
 ├── GRU_multiple_model_framework_v.ipynb
