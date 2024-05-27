@@ -4,7 +4,7 @@ This repository contatins the code for my Final Year Project at the University o
 
 ### Main SSC Dataset
 
-The \acrshort{ssc} velocities dataset can be found at the following Google Drive link:
+The SSC velocities dataset can be found at the following Google Drive link:
 
 https://drive.google.com/drive/folders/1iVAp-IvifBvOsWTyfiG4ayhCL_nQYN8T?usp=sharing
 
