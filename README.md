@@ -1,8 +1,10 @@
 # Predictive Modelling of Sea Debris Around Maltese Coastal Waters
 
-This repository contatins the code for my Final Year Project at the University of Malta. Due to size constraints, the main SSC velocities dataset is not included in the repository.
+This repository contatins the code for my Final Year Project at the University of Malta. 
 
 ### Main SSC Dataset
+
+Due to size constraints, the main SSC velocities dataset is not included in the repository.
 
 The SSC velocities dataset can be found at the following Google Drive link:
 
