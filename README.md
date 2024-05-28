@@ -1,6 +1,6 @@
 # Predictive Modelling of Sea Debris Around Maltese Coastal Waters
 
-This repository contatins all the code and corresponding outputs for my Final Year Project at the University of Malta. 
+This repository contatins all the source code and corresponding outputs for my Final Year Project at the University of Malta. 
 
 ### Main SSC Dataset
 
